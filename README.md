@@ -14,8 +14,8 @@
 
 1.主界面
 
-![主界面](images\snapshot1.png)
+![主界面](.\images\snapshot1.png)
 
 2.查看窗口属性
 
-![查看窗口属性](images\snapshot2.png)
+![查看窗口属性](.\images\snapshot2.png)
