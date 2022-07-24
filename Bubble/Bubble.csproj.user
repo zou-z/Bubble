@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>E:\Project\WPF\Bubble\Bubble\Properties\PublishProfiles\ClickOnceProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\AboutWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\InfoWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\PropertyWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Style\Button.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\Config.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\ScrollViewer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\TextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AboutWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\InfoWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\PropertyWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
