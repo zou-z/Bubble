@@ -15,7 +15,7 @@
                 <TextBlock x:Name="appName" x:FieldModifier="private"/>
                 <TextBlock x:Name="appVersion" x:FieldModifier="private" Margin="0,5,0,0"/>
                 <TextBlock Text="©zzh" Margin="0,5,0,0"/>
-                <TextBlock Text="Github" Margin="0,5,0,0" MouseLeftButtonUp="Github_Click" HorizontalAlignment="Left" ToolTip="https://github.com/zou-z">
+                <TextBlock Text="Github" Margin="0,5,0,0" MouseLeftButtonUp="Github_Click" HorizontalAlignment="Left" ToolTip="https://github.com/zou-z/Bubble">
                     <TextBlock.Style>
                         <Style TargetType="TextBlock">
                             <Setter Property="Cursor" Value="Hand"/>
