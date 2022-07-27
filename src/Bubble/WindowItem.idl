@@ -1,0 +1,14 @@
+namespace Bubble
+{
+    [Microsoft.UI.Xaml.Data.Bindable]
+    [default_interface]
+    runtimeclass WindowItem : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        WindowItem(Int64 windowHandle,String title,Boolean isTopmost);
+        Int64 Handle{ get; };
+        String Title{ get; set; };
+        Boolean IsTopmost{ get; set; };
+        Boolean SetTopmostEnable{ get; };
+        void UpdateProperties(String title, Boolean isTopmost);
+    }
+}

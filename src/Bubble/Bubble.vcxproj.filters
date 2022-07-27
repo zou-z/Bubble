@@ -6,6 +6,12 @@
   <ItemGroup>
     <Midl Include="App.idl" />
     <Midl Include="MainWindow.idl" />
+    <Midl Include="WindowItem.idl">
+      <Filter>Model</Filter>
+    </Midl>
+    <Midl Include="VmMain.idl">
+      <Filter>ViewModel</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -16,6 +22,9 @@
     <ClCompile Include="WindowUtil.cpp">
       <Filter>Util</Filter>
     </ClCompile>
+    <ClCompile Include="StringUtil.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -23,6 +32,12 @@
       <Filter>Util</Filter>
     </ClInclude>
     <ClInclude Include="WindowUtil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="MvvmUtil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="StringUtil.h">
       <Filter>Util</Filter>
     </ClInclude>
   </ItemGroup>
@@ -58,6 +73,12 @@
     </Filter>
     <Filter Include="Util">
       <UniqueIdentifier>{7bc89752-ac6c-4732-a93e-65a091751f85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Model">
+      <UniqueIdentifier>{e7ff633a-b525-4844-b019-fc1d6d6836d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ViewModel">
+      <UniqueIdentifier>{32f9a1d3-7efd-4819-86c6-87612d2cea1b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

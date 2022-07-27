@@ -1,0 +1,14 @@
+import "WindowItem.idl";
+
+namespace Bubble
+{
+    [Microsoft.UI.Xaml.Data.Bindable]
+    [default_interface]
+    runtimeclass VmMain
+    {
+        VmMain();
+        String SearchText{ get; set; };
+        Windows.Foundation.Collections.IObservableVector<WindowItem> WindowList{ get; };
+        Microsoft.UI.Xaml.Input.ICommand RefreshWindowListCommand{ get; };
+    }
+}

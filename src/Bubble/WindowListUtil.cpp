@@ -74,3 +74,26 @@ std::vector<Util::WindowInfo>* Util::GetWindowList()
 	}, reinterpret_cast<LPARAM>(list));
 	return list;
 }
+
+void Util::GetWindowList(std::vector<Util::WindowInfo> const& list)
+{
+    EnumWindows([](HWND hwnd, LPARAM lParam)
+    {
+        int titleLength = GetWindowTextLengthW(hwnd);
+        if (titleLength > 0)
+        {
+            std::wstring title(++titleLength, 0);
+            if (GetWindowTextW(hwnd, LPWSTR(title.data()), titleLength) == 0) return TRUE;
+            int classNameLength = 256;
+            std::wstring className(classNameLength, 0);
+            if (GetClassNameW(hwnd, LPWSTR(className.data()), classNameLength) == 0)return TRUE;
+            bool isTopmost = false;
+            if (IsCaptureableWindow(hwnd, title, className, isTopmost))
+            {
+                std::vector<Util::WindowInfo>* list = reinterpret_cast<std::vector<Util::WindowInfo>*>(lParam);
+                list->push_back(Util::WindowInfo{ hwnd,title,className,isTopmost });
+            }
+        }
+        return TRUE;
+    }, reinterpret_cast<LPARAM>(&list));
+}

@@ -1,11 +1,13 @@
 ﻿#include "pch.h"
+#include "VmMain.h"
 #include "MainWindow.xaml.h"
 #if __has_include("MainWindow.g.cpp")
 #include "MainWindow.g.cpp"
 #endif
 
-#include "WindowListUtil.h"
+#include <winrt/Microsoft.UI.Xaml.Input.h>
 
+using namespace winrt::Windows::Foundation;
 using namespace winrt::Microsoft::UI::Xaml;
 
 namespace winrt::Bubble::implementation
@@ -13,21 +15,11 @@ namespace winrt::Bubble::implementation
     MainWindow::MainWindow()
     {
         InitializeComponent();
-    }
-
-    int32_t MainWindow::MyProperty()
-    {
-        throw hresult_not_implemented();
-    }
-
-    void MainWindow::MyProperty(int32_t /* value */)
-    {
-        throw hresult_not_implemented();
-    }
-
-    void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
-    {
-        auto list = Util::GetWindowList();
-        myButton().Content(box_value(L"Clicked"));
+        main = winrt::make<Bubble::implementation::VmMain>();
+        activatedToken = Activated([this](IInspectable, WindowActivatedEventArgs)
+        {
+            Activated(activatedToken);
+            main.RefreshWindowListCommand().Execute(IInspectable{});
+        });
     }
 }

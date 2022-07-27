@@ -4,9 +4,9 @@ namespace Util
 {
 	struct WindowInfo
 	{
-		HWND WindowHandle;
-		std::wstring Title;
-		std::wstring ClassName;
+		HWND WindowHandle{ 0 };
+		std::wstring Title = L"";
+		std::wstring ClassName = L"";
 		bool IsTopmost = false;
 
 		bool operator==(const WindowInfo& info) { return WindowHandle == info.WindowHandle; }
@@ -14,4 +14,5 @@ namespace Util
 	};
 
 	std::vector<WindowInfo>* GetWindowList();
+	void GetWindowList(std::vector<WindowInfo> const& list);
 }

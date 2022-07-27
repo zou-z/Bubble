@@ -105,12 +105,22 @@
     <Manifest Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MvvmUtil.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
     </ClInclude>
     <ClInclude Include="MainWindow.xaml.h">
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </ClInclude>
+    <ClInclude Include="StringUtil.h" />
+    <ClInclude Include="VmMain.h">
+      <DependentUpon>VmMain.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClInclude>
+    <ClInclude Include="WindowItem.h">
+      <DependentUpon>WindowItem.idl</DependentUpon>
+      <SubType>Code</SubType>
     </ClInclude>
     <ClInclude Include="WindowListUtil.h" />
     <ClInclude Include="WindowUtil.h" />
@@ -130,6 +140,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="StringUtil.cpp" />
+    <ClCompile Include="VmMain.cpp">
+      <DependentUpon>VmMain.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
+    <ClCompile Include="WindowItem.cpp">
+      <DependentUpon>WindowItem.idl</DependentUpon>
+      <SubType>Code</SubType>
+    </ClCompile>
     <ClCompile Include="WindowListUtil.cpp" />
     <ClCompile Include="WindowUtil.cpp" />
   </ItemGroup>
@@ -141,6 +160,12 @@
     <Midl Include="MainWindow.idl">
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Midl>
+    <Midl Include="VmMain.idl">
+      <SubType>Designer</SubType>
+    </Midl>
+    <Midl Include="WindowItem.idl">
+      <SubType>Designer</SubType>
     </Midl>
   </ItemGroup>
   <ItemGroup>
