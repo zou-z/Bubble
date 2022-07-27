@@ -4,11 +4,9 @@
 #include "MainWindow.g.cpp"
 #endif
 
-using namespace winrt;
-using namespace Microsoft::UI::Xaml;
+#include "WindowListUtil.h"
 
-// To learn more about WinUI, the WinUI project structure,
-// and more about our project templates, see: http://aka.ms/winui-project-info.
+using namespace winrt::Microsoft::UI::Xaml;
 
 namespace winrt::Bubble::implementation
 {
@@ -29,6 +27,7 @@ namespace winrt::Bubble::implementation
 
     void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
+        auto list = Util::GetWindowList();
         myButton().Content(box_value(L"Clicked"));
     }
 }
