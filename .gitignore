@@ -2,10 +2,8 @@
 # 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
 ################################################################################
 
-/src/Bubble/bin
-/src/Bubble/obj
-/src/.vs/Bubble/DesignTimeBuild
-/src/.vs/Bubble/FileContentIndex
-/src/.vs/ProjectEvaluation
 /src/.vs
-*.suo
+/src/Bubble/Generated Files/
+/src/Bubble/x64/
+/src/packages/
+/src/x64/
