@@ -113,6 +113,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClInclude>
     <ClInclude Include="WindowListUtil.h" />
+    <ClInclude Include="WindowUtil.h" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -130,6 +131,7 @@
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
     <ClCompile Include="WindowListUtil.cpp" />
+    <ClCompile Include="WindowUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="App.idl">

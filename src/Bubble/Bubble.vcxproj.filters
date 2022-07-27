@@ -13,10 +13,16 @@
     <ClCompile Include="WindowListUtil.cpp">
       <Filter>Util</Filter>
     </ClCompile>
+    <ClCompile Include="WindowUtil.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="WindowListUtil.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowUtil.h">
       <Filter>Util</Filter>
     </ClInclude>
   </ItemGroup>
